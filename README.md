@@ -1,29 +1,33 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+startup_jade
+==================
 
-### What is this repository for? ###
+This repository is a base project setup for getting started with front end projects.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Install Instructions:
 
-### How do I get set up? ###
+*If you have NodeJS, SASS and Gulp installed, skip to step 5.*
+*If you see any permisssion error while executing any of the commands below, use sudo if on MAC or run the cmd prompt with admin privileges if on windows.*
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+1) Install Ruby - https://www.ruby-lang.org/en/installation/
 
-### Contribution guidelines ###
+2) Install SASS using the following command:
+   - gem install sass
 
-* Writing tests
-* Code review
-* Other guidelines
+3) Install NodeJS - http://nodejs.org/download/
 
-### Who do I talk to? ###
+4) Install the gulp plugin,
+   - npm install -g gulp
 
-* Repo owner or admin
-* Other community or team contact
+5) Clone this repository into your local environment.
+
+6) Once you have successfully cloned the repository, open the command prompt / Terminal (if on MAC) and browse to the local repo root folder and then run following commands:
+  - npm install
+
+7) If all the installation goes smoothly, run the final command:
+   - gulp clean && gulp && gulp watch
+ 
+8) This would compile the source files and open the main page in browser.
+
+9) Done!
