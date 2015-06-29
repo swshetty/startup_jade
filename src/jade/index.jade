@@ -1,0 +1,101 @@
+extends ./layout-styleguide.jade
+
+block variables
+  -var depth = './'
+
+block component
+  h1 Front-end Page Templates
+  ul
+    li <strong>Locked</strong> - Event Management
+      ul.listStyleDisc
+        li Events
+          ul.listStyleCircle
+            li
+              a(href='event-management/event-list.html', target='_blank') Event List
+            li
+              a(href='event-management/event-search.html', target='_blank') Event Search
+            li
+              a(href='event-management/event-search-results.html', target='_blank') Event Search Results          
+        li Event Setup
+          ul.listStyleCircle      
+            li
+              a(href='event-management/event-basic-details.html', target='_blank') Basic Details
+            li
+              a(href='event-management/event-registration.html', target='_blank') Registration
+            li
+              a(href='event-management/event-eligibility.html', target='_blank') Eligibility
+            li
+              a(href='event-management/event-participants-details.html', target='_blank') Participant Details 
+            li
+              a(href='event-management/event-payments.html', target='_blank') Payment
+        li Functions
+          ul.listStyleCircle
+            li
+              a(href='event-management/function-manage.html', target='_blank') Manage Functions
+        li Participant Management
+          ul.listStyleCircle
+            li
+              a(href='event-management/registered.html', target='_blank') Registered List
+            li
+              a(href='event-management/invite-list.html', target='_blank') Invitation List
+            li
+              a(href='event-management/participant-info.html', target='_blank') Participant Info
+            li
+              a(href='event-management/wait-list.html', target='_blank') Wait List
+            li
+              a(href='event-management/approval-pending.html', target='_blank') Approval Pending
+            li
+              a(href='event-management/messaging.html', target='_blank') Messaging
+        li Preferences
+          ul.listStyleCircle
+            li
+              a(href='event-management/global-settings.html', target='_blank') Global Settings
+  ul
+    li <strong>Open</strong> - Tournament
+      ul
+        li: a(href='tournament/tournament-setup.html' target='_blank') Setup
+        li: a(href='tournament/tournament-flights-and-rounds.html' target='_blank') Flights &amp; Rounds
+        li.listStyleDisc Scoring
+          ul.listStyleCircle
+            li: a(href='tournament/scoring-strokeplay-oneflight.html', target='_blank') Scoring StrokePlay - One Flight
+            li: a(href='tournament/scoring-strokeplay-multipleflight.html', target='_blank') Scoring StrokePlay - Multiple Flight
+            li: a(href='tournament/scoring-matchplay-oneflight.html', target='_blank') Scoring MatchPlay - One Flight
+            li: a(href='tournament/scoring-matchplay-multipleflight.html', target='_blank') Scoring MatchPlay - Multiple Flight
+            li: a(href='tournament/scoring-stroketomatchplay-oneflight.html', target='_blank') Scoring Stroke to Match Play - Single Flight
+            li: a(href='tournament/scoring-stroketomatchplay-multipleflight.html', target='_blank') Scoring Stroke to Match Play - Multiple Flight
+            li: a(href='tournament/scoring-round-robin-oneflight.html', target='_blank') Scoring Round Robin - One Flight
+            li: a(href='tournament/scoring-round-robin-multipleflight.html', target='_blank') Scoring Round Robin - Multiple Flight
+            li: a(href='tournament/scoring-league-oneflight.html', target='_blank') Scoring League - One Flight
+            li: a(href='tournament/scoring-league-multipleflight.html', target='_blank') Scoring League - Multiple Flight
+            li: a(href='tournament/scoring-cupmatch-oneflight.html', target='_blank') Scoring Cup Match - One Flight
+            li: a(href='tournament/scoring-cupmatch-multipleflight.html', target='_blank') Scoring Cup Match - Multiple Flight
+        li: a(href='tournament/additional-games.html' target='_blank') Additional Games
+  ul
+    li <strong>Open</strong> - Template Management
+      ul
+        li: a(href='template-management/template-list-usga.html', target='_blank')  Template List - USGA
+        li: a(href='template-management/template-list-srga.html', target='_blank')  Template List - SRGA
+        li: a(href='template-management/template-list-club.html', target='_blank') Template List - Club
+        li: a(href='template-management/template-shared.html', target='_blank') Shared with User - SRGA and Club
+        li: a(href='template-management/template-search.html' target='_blank') Template Search
+        li: a(href='template-management/template-list.html' target='_blank') Template List - Club Search Results
+        li: a(href='template-management/template-search-results.html' target='_blank') Template Search Results - Club
+        li: a(href='template-management/template-search-results-srga.html' target='_blank') Template Search Results - SRGA
+        li: a(href='template-management/template-list-srga-search-results.html' target='_blank') Template List - SRGA Search Results
+        li: a(href='template-management/template-summary.html' target='_blank') Template Summary
+  ul
+    li <strong>Open</strong> - Player, Team, Flight and Course Management
+      ul
+        li: a(href='player-team-flight-course-management/event-search-results.html', target='_blank') Event Search Results
+        li: a(href='player-team-flight-course-management/player-search-results.html', target='_blank') Player Search Results
+        li: a(href='player-team-flight-course-management/withdraw-list.html', target='_blank') Withdraw List
+  ul
+    li #[strong Open] - Player Score Management
+      ul
+        li: a(href='player-score-management/player-scoring.html', target='_blank') Player Scoring
+        li: a(href='player-score-management/handicap-history.html', target='_blank') Handicap History
+  ul
+    li #[strong Open] - Player Profile Management
+      ul
+        li: a(href='player-profile-management/create-account.html', target='_blank') Create Account
+        li: a(href='player-profile-management/create-ghin-profile.html', target='_blank') Create GHIN Profile

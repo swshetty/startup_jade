@@ -1,0 +1,218 @@
+// Include Fonts
+@include font-face(Alegreya Sans, '../fonts/alegreyasans-regular-webfont');
+@include font-face(Alegreya Sans, '../fonts/alegreyasans-bold-webfont', bold);
+@include font-face(Alegreya Sans Thin, '../fonts/alegreyasans-thin-webfont');
+@include font-face(Open Sans, '../fonts/opensans-regular-webfont');
+@include font-face(Open Sans, '../fonts/opensans-bold-webfont', bold);
+@include font-face(Open Sans Semibold, '../fonts/opensans-semibold-webfont');
+@include font-face(Open Sans Light, '../fonts/opensans-light-webfont');
+@include font-face(Open Sans Light, '../fonts/opensans-lightitalic-webfont', italic);
+
+// Typography
+$sans-serif: $helvetica;
+$serif: $georgia;
+$base-font-family: 'Alegreya Sans', $sans-serif;
+$header-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+$base-font-size-mobile: em(14);
+$h1-font-size: $base-font-size * 2.75;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+$header-height-small: em(54);
+
+// Other Sizes
+$wrapper-top-spacing-large: 2.5em;
+$wrapper-top-spacing-medium: $wrapper-top-spacing-large / 2;
+$wrapper-top-spacing: $wrapper-top-spacing-large / 4;
+
+$wrapper-side-spacing-large: 3.125em;
+$wrapper-side-spacing-medium: $wrapper-side-spacing-large / 2;
+$wrapper-side-spacing: $wrapper-side-spacing-large / 4;
+
+$base-border-radius: 0;
+$base-spacing: $base-line-height * 1em;
+
+$wrapper-spacing:         $wrapper-top-spacing $wrapper-side-spacing;
+$wrapper-spacing-medium:  $wrapper-top-spacing-medium $wrapper-side-spacing-medium; 
+$wrapper-spacing-large:   $wrapper-top-spacing-large $wrapper-side-spacing-large; 
+
+$wrapper-spacing-half-bottom-padding: $wrapper-top-spacing-large $wrapper-side-spacing-large $wrapper-top-spacing / 2;
+$wrapper-spacing-no-bottom-padding: $wrapper-top-spacing-large $wrapper-side-spacing-large 0;
+$base-z-index: 0;
+$core-z-index: 100;
+$overlap-z-index:101;
+
+// Colors
+$black: #00060a;
+$gray: #bdbebf;
+$cloud: #d7d8d9;
+$white: #f7f9fa;
+$pewter: #919599;
+$graphite: #525d66;
+$charcoal: #475259;
+$navy: #003259;
+$sky: #a0d5ff;
+$blue: #30a3ff;
+$usga-blue: #00365f;
+$cerulean: #0f5d99;
+$ocean: #005494;
+$orange: #ff7800;
+$red: #DA1a31;
+$crimson: #bf172b;
+$green: #14cc88;
+$yellow: #fbf273;
+
+$transparent: rgba(0, 0, 0, 0);
+$transparent-blue: rgba(0, 54, 95, 0.9);
+$transparent-gray: rgba(0, 6, 10, 0.15);
+$transparent-black: rgba(0, 6, 10, 0.3);
+$transparent-charcoal: rgba(0, 6, 10, 0.4);
+$transparent-night: rgba(0, 6, 10, 0.8);
+$transparent-white: rgba(247, 249, 250, 0.12);
+
+// Background Color
+$base-background-color: $transparent-blue;
+$alt-background-color: $transparent-white;
+
+// Font Colors
+$base-accent-color: $red;
+
+// Typography Colors
+$text-gray: $cloud;
+$base-font-color: $graphite;
+$text-shadow-color:rgba($black, .2);
+
+// Link Colors
+$base-link-color: $sky;
+$hover-link-color: $sky;
+
+// Button Colors
+$base-button-color: $red;
+$base-button-border-color: $crimson;
+$hover-button-color: $crimson;
+$secondary-button-color: $graphite;
+$secondary-button-hover-color: $charcoal;
+$secondary-button-border-color: $charcoal;
+$tertiary-button-color: $cerulean;
+$tertiary-button-hover-color: $ocean;
+$tertiary-button-border-color: $ocean;
+
+// Flash Colors
+$alert-color: $yellow;
+$error-color: $orange;
+$notice-color: $sky;
+$success-color: $green;
+
+// Border color
+$base-border-color: $transparent-white;
+$base-border: 2px solid $base-border-color;
+
+// Forms
+$form-input-background-color: $transparent-black;
+$form-input-background-color-focus: $transparent-charcoal;
+$form-input-background-color-alt: lighten($transparent-black, 10);
+$form-input-background-color-alt-focus: $transparent-black;
+$form-border-color: $gray;
+$form-border-color-hover: darken($gray, 10);
+$form-border-color-focus: $white;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: 'Open Sans', $sans-serif;
+
+// Button Groups
+$button-group-background: $transparent-white;
+$button-group-color: $white;
+$button-group-background-checked: $transparent-black;
+$button-group-color-checked: $white;
+$button-group-border-checked: $red;
+
+// Tabs
+$tab-border-color: $base-border-color;
+$tab-border: 1px solid $tab-border-color;
+$tab-content-background: none;
+$tab-active-background: $usga-blue;
+$tab-inactive-color: rgba($usga-blue, .6);
+$tab-inactive-hover-color: rgba($usga-blue, .8);
+$tab-inactive-text-color: $pewter;
+$tab-hover-text-color: $cloud;
+$tab-active-text-color: $white;
+$tab-mode: $large-screen;
+
+// Accordion
+$accordion-menu-border-color: $base-border-color;
+$accordion-menu-color: $usga-blue;
+$accordion-menu-border: 1px solid $accordion-menu-border-color;
+$accordion-menu-background: $white;
+$accordion-menu-hover: lighten($accordion-menu-background, 2%);
+$accordion-menu-sub-background: $gray;
+$accordion-menu-sub-hover-background: $pewter;
+$accordion-menu-sub-selected-background: $graphite;
+$accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
+$accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
+$accordion-menu-list-padding: ($base-spacing / 2) $gutter;
+
+// Nav
+$navigation-padding: 1em;
+$navigation-background: $white;
+$navigation-color: $usga-blue;
+$navigation-color-hover: $usga-blue;
+$navigation-height: 57px;
+$navigation-active-link-color: transparentize(white, 0.5);
+$navigation-submenu-padding: 1em;
+$navigation-submenu-width: 280px;
+$horizontal-bar-mode: $large-screen;
+
+
+// breadcrumbs
+$breadcrumbs-padding: 1em;
+$breadcrumbs-background: $usga-blue;
+$breadcrumbs-color: $gray;
+$breadcrumbs-color-hover: white;
+$breadcrumbs-height: em(54);
+$breadcrumbs-height-large: em(74); 
+$breadcrumbs-active-link-color: transparentize(white, 0.5);
+$breadcrumbs-submenu-padding: 1em;
+$breadcrumbs-submenu-width: 12em;
+$horizontal-bar-mode: $large-screen;
+
+// dropdown
+$dropdown-color: $base-font-color;
+$dropdown-description-color: lighten($dropdown-color, 60);
+$dropdown-border: 2px solid $secondary-button-border-color;
+$dropdown-border-hover: 2px solid darken($secondary-button-border-color, 5);
+$dropdown-background: $secondary-button-color;
+$dropdown-background-hover: $secondary-button-hover-color;
+$dropdown-inner-border: 1px solid silver;
+$dropdown-height: 44px;
+$dropdown-padding: 1em;
+$dropdown-distance-from-menu: 52px;
+$dropdown-arrow-top-distance: 18px;
+
+// side-nav
+$side-nav-padding: 8px;
+$sidebar-width: em(300);
+
+$sidebar-gutter: $wrapper-side-spacing;
+$sidebar-gutter-medium: $wrapper-side-spacing-medium;
+
+$sidebar-transform: $sidebar-width + $sidebar-gutter;
+$sidebar-transform-medium: $sidebar-width + $sidebar-gutter-medium;
+
+
+// tables
+$table-row-bg: ;
+$table-row-bg-active: transparentize($black, 0.72);
+
+
+

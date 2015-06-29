@@ -1,0 +1,11 @@
+extends ./layout.jade
+
+block variables
+  - var depth = '../'
+
+block content
+  .wrapper.content
+    .sidebar
+      include ./partials/nav-styleguide
+    .main-content
+      block component

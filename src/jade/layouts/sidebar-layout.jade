@@ -1,0 +1,14 @@
+extends ../layout.jade
+
+block variables
+  - var depth = '../'
+
+block content
+  .wrapper.content
+    .sidebar(offcanvas-sidebar)
+      block sidebar
+      button(data-sidebar-toggle).sidebar-toggle
+        span.side-nav-arrow
+
+    .main-content
+      block main-content

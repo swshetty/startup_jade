@@ -1,0 +1,28 @@
+mixin footer
+  .modal(modal)
+    input.modal-state#help-modal(type="checkbox")
+    .modal-window
+      .modal-inner
+        label.modal-close(for="help-modal")
+        h2 Contact Support
+        p Need help? Please Contact your golf Association listed below.
+        h4 Florida State Golf Association
+        p Email: support@fsga.org
+        p Phone: +1 (123) 456-7890
+        p Hours: Monday to Friday - 8:00 am - 5:00 pm
+        p Web: www.fsga.org
+  footer
+    .wrapper
+      .copyright Copyright 2015 - United States Golf Association
+      .footer-links
+        ul
+          li
+            label(for="help-modal") Help
+          li
+            a(href="#") Legal
+          li
+            a(href="#") Copyright
+          li
+            a(href="#") USGA.org
+          if block
+            block

@@ -1,0 +1,21 @@
+.modal.action(modal, ng-class="{disabled: checkedEntries.length == 0}")
+  input.modal-state#approve(ng-disabled="checkedEntries.length == 0", type="checkbox")
+  .modal-window
+    .modal-inner
+      label.modal-close(for="approve")
+      h2 Approve
+      p The selected players will be added to the attendee list. You can go back and remove them again at any time.
+      
+      table.checkbox_table(checkbox-table, cellspacing='0', cellpadding='0')
+        tbody
+          tr(ng-repeat="entry in checkedEntries")
+            td
+              input.checkbox(ng-model="entry.checked",type='checkbox', name='delete-entry-{{$index}}', value='' id='delete-entry-{{$index}}')
+              label(for='delete-entry-{{$index}}') <span></span>
+              td(colspan='1') {{entry.serialNo}}
+              td(colspan='5') {{entry.name}}</a> ({{entry.ghinID}})
+                span {{entry.club}} 
+              
+      .button-options
+        button(ng-click="approveEntries()") Approve
+        button.cancel Cancel

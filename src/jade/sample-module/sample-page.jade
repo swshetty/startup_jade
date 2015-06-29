@@ -1,0 +1,30 @@
+extends ../layout.jade
+
+block variables
+  - var page = 'event-search'
+  - var depth = '../'
+
+block breadcrumbs
+  li: a(href='javascript:void(0)') Home
+  li: a(href='javascript:void(0)') Event Management
+  li: a(href='javascript:void(0)') Event Search
+
+block actions
+  a(href='event-search-results.html').button.action Search
+
+block content
+  .wrapper.content
+
+    form
+      section
+        .event
+          label Event name
+          input#text_field(type="text")
+        
+        .association
+          label(for='association') Association Name or ID
+          angucomplete-alt(pause="100", disable-input="searchAllAssociations", placeholder="Search by Name or ID", selected-object="Query.selectedAssociation", local-data="associations", search-fields="name", title-field='name', minlength='1')
+        .club
+          label(for='club') Club Name or ID
+          angucomplete-alt(pause="100", placeholder="Search by Name or ID", selected-object="Query.club", local-data="clubs", search-fields="name", title-field='name', minlength='1')
+      

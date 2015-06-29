@@ -1,0 +1,18 @@
+.modal.action(modal, ng-init="eventEntity='USGA'")
+  input.modal-state#select-fields(type="checkbox")
+  .modal-window
+    .modal-inner
+      .content
+        label.modal-close(for="select-fields")
+        h2 Additional Fields 
+        
+        section        
+          p Select additional fields to ask participants during registration.
+          .radio-checkbox-3 
+            input.checkbox(ng-repeat-start="item in additionalList" type='checkbox', id='{{item.name}}', name='{{item.name}}', value='{{item.name}}' ng-model="item.sel")
+            label(ng-repeat-end for='{{item.name}}') <span></span> {{item.name}}                                                                                  
+        
+        .button-options()
+          button.activate(ng-click='addFields()') {{predefinedRegistration.length ? 'Update' : 'Add'}}
+          button.cancel Cancel
+ 

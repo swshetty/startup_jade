@@ -1,0 +1,69 @@
+.modal.action.add-event-modal(modal)
+  input.modal-state#add-event(type="checkbox")
+  .modal-window
+    .modal-inner
+      .content
+        label.modal-close(for="add-event")
+        h2 Create Event
+
+        section
+          h3 Basic Information
+          .event-name
+            label.required(for='event-name') Event Name
+            input#event-name(type='text', ng-model='eventName')
+          .event-description
+            label(for='event-description') Description
+            textarea#event-description(ng-model='eventDescription')
+          .event-creation
+            label(for='event-creation-method') Creation Method
+            .radio-checkbox-4of8
+              label.radio-wrap(radio-label)
+                input(type="radio" name="event-creation-method" ng-model="eventCreationMethod" value='new') 
+                <span></span> New Event
+              label.radio-wrap(radio-label)
+                input(type="radio" name="event-creation-method" ng-model="eventCreationMethod" value='template')
+                <span></span> From Favorite Template
+          .event-template(ng-if='eventCreationMethod=="template"')
+            label(for='game_format') Select Template
+            .custom-select
+              select#event_template(name='event_template', ng-model='selectedEventTemplate' ng-options="template as template for template in eventTemplates" placeholder='Select one')
+          .event-includes(ng-if='eventCreationMethod=="new"')
+            label.required Event Includes
+            .radio-checkbox-3
+              input.checkbox(ng-repeat-start="item in eventTypes", type="checkbox", name="event-type", value="{{item}}", id="{{item}}",  ng-checked="selectedEventTypes.indexOf(item) > -1", ng-click="toggleEventTypes(item)")
+              label(for="{{item}}", ng-repeat-end) #[span] {{item}}
+          
+        section
+          .separator
+            span
+
+        section
+          h3 Date and Time
+          .date-time-picker
+            .start-date(ng-class="{expanded:setTimes}")
+              label(for='datepicker' ng-show="setTimes") Start Date and Time
+              label(for='datepicker' ng-hide="setTimes") Start Date
+              .datepicker
+                input(type='text', id="date-range-start", name='date-range-start', date-picker, range-start="true", range-end-id="date-range-end", ng-model='eventStartDate')
+              .timepicker(ng-show="setTimes")
+                usga-timepicker(ng-model="startTime")
+
+            .end-date(ng-class="{expanded:setTimes}")
+              label(for='datepicker' ng-show="setTimes") End Date and Time
+              label(for='datepicker' ng-hide="setTimes") End Date
+              .datepicker
+                input(type='text', id="date-range-end", name='date-range-end', date-picker, range-end="true", range-start-id="date-range-start", ng-model='eventEndDate')
+              .timepicker(ng-show="setTimes")
+                usga-timepicker(ng-model="endTime")
+          .single-option(ng-class="{expanded:setTimes}")
+            .radio-checkbox-3
+              input.checkbox(type='checkbox', name='set_times', value='check', id='set_times', ng-model="setTimes")
+              label(for='set_times') <span></span> Set Times
+
+        .button-options
+          button.activate(ng-click='createNewEvent()') Create
+          button.cancel Cancel
+
+
+
+
