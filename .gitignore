@@ -10,5 +10,6 @@ Thumbs.db
 # Other #
 /public
 /node_modules
+npm-debug.log
 /.idea
 secrets.json
