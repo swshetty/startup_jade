@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     jshint = require('gulp-jshint'),
     notify = require('gulp-notify'),
-    neat = require('node-neat').includePaths,
     plumber = require('gulp-plumber'),
     svg2png = require('gulp-svg2png'),
     filter = require('gulp-filter'),
@@ -38,8 +37,7 @@ gulp.task('sass', function() {
     .pipe(changed(paths.sass.dst))
     .pipe(sourcemaps.init())
     .pipe(sass({
-        includePaths: ['styles'].concat(neat),
-        errLogToConsole: true
+      errLogToConsole: true
     }))
     .pipe(sourcemaps.write('.', {includeContent: false}))
     .pipe(gulp.dest(paths.sass.dst))
@@ -86,12 +84,12 @@ gulp.task('js', function() {
   gulp.src([
       'src/js/vendor/angular-1.3.5.min.js',
       'src/js/vendor/ui-utils.min.js',
+      'src/js/app.js',
       'src/js/modules/*',
       'src/js/directives/**/*.js',
       'src/js/services/*.js',
       'src/js/filters/*.js',
       'src/js/controllers/**/*.js',
-      'src/js/main.js',
       'src/js/decorators/**/*.js'])
     .pipe(plumber())
     .pipe(concat('main.js'))
