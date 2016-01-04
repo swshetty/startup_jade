@@ -1,8 +1,0 @@
-mixin modal(id, title)
-  .modal.action(modal, class=id)
-    input.modal-state(type='checkbox', id=id)
-    .modal-window
-      .modal-inner
-        label.modal-close(for=id)
-        h2= title
-        block

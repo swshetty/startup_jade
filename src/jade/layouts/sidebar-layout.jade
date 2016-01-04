@@ -1,3 +1,5 @@
+//this is an example of a sample layout, you can create additional custom layouts and extend them for specific pages with a different layout than the main page/layout.
+
 extends ../layout.jade
 
 block variables
@@ -5,10 +7,8 @@ block variables
 
 block content
   .wrapper.content
-    .sidebar(offcanvas-sidebar)
+    .sidebar
       block sidebar
-      button(data-sidebar-toggle).sidebar-toggle
-        span.side-nav-arrow
 
     .main-content
       block main-content
